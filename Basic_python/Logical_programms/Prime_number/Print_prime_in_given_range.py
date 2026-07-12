@@ -1,0 +1,28 @@
+#print prime number in given range
+
+start = int(input("Enter the starting number: "))
+end = int(input("Enter the ending number: "))
+
+for num in range(start, end+1):
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            print(num)
+
+#print prime number in given range using function
+
+def print_prime(start, end):
+    for num in range(start, end+1):
+        if num > 1:
+            for i in range(2, num):
+                if (num % i) == 0:
+                    break
+            else:
+                print(num)
+
+first = int(input("Enter the starting number: "))
+last = int(input("Enter the ending number: "))
+
+print_prime(first, last)
